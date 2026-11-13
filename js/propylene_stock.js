@@ -213,7 +213,8 @@ function liquidVolume(data, tableName, levelMM) {
   if (levelCM < minLevel || levelCM > maxLevel) {
 
     throw new Error(
-      tableName.replace("_", " ").toUpperCase() +
+      tableName.replace("_", " ")
+         .replace(/\b\w/g, c => c.toUpperCase()) +
       " level must be between " +
       (minLevel * 10).toFixed(0) +
       " mm and " +
