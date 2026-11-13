@@ -534,6 +534,20 @@ if(alertsText !== undefined){
 }
 
 
+/* ===== AUTOMATIC DATA SYNC ===== */
+
+// Refresh dashboard data every 2 minutes
+setInterval(() => {
+    if (navigator.onLine) {
+        autoRefreshData();
+    }
+}, 2 * 60 * 1000);
+
+// Refresh when internet connectivity is restored
+window.addEventListener("online", () => {
+    autoRefreshData();
+});
+
 
 /* ===== INDEPENDENT COUNTERS PAGE SELECTORS ===== */
 
