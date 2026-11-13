@@ -157,18 +157,16 @@ function fetchCSV(url, optional = false) {
 
         .catch(err => {
 
-            // Failed or unavailable data must not count as fresh sync
-            markCachedDataUsed();
+    		console.warn("CSV load failed:", url, err);
 
-            console.warn("CSV load failed:", url, err);
+    		if (optional) {
+       			return "";
+    		}
 
-            if (optional) {
-                return "";
-            }
+    		markCachedDataUsed();
+    		throw err;
 
-            throw err;
-
-        });
+	});
 
 }
 
