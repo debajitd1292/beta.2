@@ -5769,3 +5769,14 @@ body option {
         #2563eb 100%
     );
 }
+/* Metallic border for double and triple shifts */
+
+.badge.SHIFT-AB,
+.badge.SHIFT-AC,
+.badge.SHIFT-BC,
+.badge.SHIFT-ABC {
+    border: 1px solid #D4AF37 !important;
+    box-shadow:
+        0 0 5px rgba(212, 175, 55, 0.45),
+        inset 0 0 2px rgba(255, 255, 255, 0.25);
+}
