@@ -18,10 +18,10 @@ const imsUrl =
     baseUrl + "updates/ims.csv?v=" + DATA_VERSION;
 
 const productionPlanUrl =
-    baseUrl + "production/production_plan.csv?v=" + DATA_VERSION;
+    baseUrl + "updates/production_plan.csv?v=" + DATA_VERSION;
 
 const productionTargetUrl =
-    baseUrl + "production/production_target.csv?v=" + DATA_VERSION;
+    baseUrl + "updates/production_target.csv?v=" + DATA_VERSION;
 
 const seniorityExecUrl =
     baseUrl + "seniority/seniority_exec.csv?v=" + DATA_VERSION;
@@ -95,50 +95,25 @@ function updateShiftUrls(){
 
 
     /* PREVIOUS MONTH */
-
     shiftUrlPrev =
-        baseUrl +
-        "exec/shift_exec_" +
-        prevMonthKey +
-        ".csv?v=" +
-        DATA_VERSION;
+        baseUrl + "updates/exec/shift_exec_" + prevMonthKey + ".csv?v=" + DATA_VERSION;
 
     nonExecUrlPrev =
-        baseUrl +
-        "nonexec/shift_nonexec_" +
-        prevMonthKey +
-        ".csv?v=" +
-        DATA_VERSION;
+        baseUrl + "updates/nonexec/shift_nonexec_" + prevMonthKey + ".csv?v=" + DATA_VERSION;
 
 
     /* CURRENT MONTH */
-
     shiftUrl =
-        baseUrl +
-        "exec/shift_exec_" +
-        monthKey +
-        ".csv?v=" +
-        DATA_VERSION;
+        baseUrl + "updates/exec/shift_exec_" + monthKey + ".csv?v=" + DATA_VERSION;
 
     nonExecUrl =
-        baseUrl +
-        "nonexec/shift_nonexec_" +
-        monthKey +
-        ".csv?v=" +
-        DATA_VERSION;
+        baseUrl + "updates/nonexec/shift_nonexec_" + monthKey + ".csv?v=" + DATA_VERSION;
 
+    /* NEXT MONTH */
     shiftUrlNext =
-        baseUrl +
-        "exec/shift_exec_" +
-        nextMonthKey +
-        ".csv?v=" +
-        DATA_VERSION;
+        baseUrl + "updates/exec/shift_exec_" + nextMonthKey + ".csv?v=" + DATA_VERSION;
 
     nonExecUrlNext =
-        baseUrl +
-        "nonexec/shift_nonexec_" +
-        nextMonthKey +
-        ".csv?v=" +
-        DATA_VERSION;
+        baseUrl + "updates/nonexec/shift_nonexec_" + nextMonthKey + ".csv?v=" + DATA_VERSION;
 
 }
