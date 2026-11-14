@@ -41,14 +41,14 @@ async function renderSelected(){
 
         const selectedExecUrl =
             baseUrl +
-            "updates/shift/exec/shift_exec_" +
+            "exec/shift_exec_" +
             monthKey +
             ".csv?v=" +
             Date.now();
 
         const selectedNonExecUrl =
             baseUrl +
-            "updates/shift/nonexec/shift_nonexec_" +
+            "nonexec/shift_nonexec_" +
             monthKey +
             ".csv?v=" +
             Date.now();
@@ -137,18 +137,21 @@ async function renderSelected(){
     }
 
 
-/* =========================================
+    /* =========================================
        RENDER SELECTED DATE
-   ========================================= */
+       ========================================= */
 
     render("selected", renderDate);
 }
+
+
 
 /* =========================================================
    ECO & LEAVE COUNTER — CALENDAR YEAR TO CURRENT DATE
    ========================================================= */
 
 let ecoLeaveRenderToken = 0;
+
 
 function renderEcoLeaveCounterMarkup() {
     return `

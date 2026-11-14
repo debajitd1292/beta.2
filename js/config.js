@@ -1,6 +1,6 @@
 const DATA_VERSION = Date.now();
 
-const baseUrl = "https://raw.githubusercontent.com/debajitd1292/beta.2/main/";
+const baseUrl = "https://raw.githubusercontent.com/debajitd1292/ppu/main/";
 
 const holidayUrl =
     baseUrl + "updates/holiday.csv?v=" + DATA_VERSION;
@@ -18,16 +18,16 @@ const imsUrl =
     baseUrl + "updates/ims.csv?v=" + DATA_VERSION;
 
 const productionPlanUrl =
-    baseUrl + "updates/production/production_plan.csv?v=" + DATA_VERSION;
+    baseUrl + "production/production_plan.csv?v=" + DATA_VERSION;
 
 const productionTargetUrl =
-    baseUrl + "updates/production/production_target.csv?v=" + DATA_VERSION;
+    baseUrl + "production/production_target.csv?v=" + DATA_VERSION;
 
 const seniorityExecUrl =
-    baseUrl + "updates/seniority/seniority_exec.csv?v=" + DATA_VERSION;
+    baseUrl + "seniority/seniority_exec.csv?v=" + DATA_VERSION;
 
 const seniorityNonExecUrl =
-    baseUrl + "updates/seniority/seniority_nonexec.csv?v=" + DATA_VERSION;
+    baseUrl + "seniority/seniority_nonexec.csv?v=" + DATA_VERSION;
 
 /* =========================================
    DYNAMIC SHIFT MONTH URLS
@@ -95,25 +95,50 @@ function updateShiftUrls(){
 
 
     /* PREVIOUS MONTH */
+
     shiftUrlPrev =
-        baseUrl + "updates/shift/exec/shift_exec_" + prevMonthKey + ".csv?v=" + DATA_VERSION;
+        baseUrl +
+        "exec/shift_exec_" +
+        prevMonthKey +
+        ".csv?v=" +
+        DATA_VERSION;
 
     nonExecUrlPrev =
-        baseUrl + "updates/shift/nonexec/shift_nonexec_" + prevMonthKey + ".csv?v=" + DATA_VERSION;
+        baseUrl +
+        "nonexec/shift_nonexec_" +
+        prevMonthKey +
+        ".csv?v=" +
+        DATA_VERSION;
 
 
     /* CURRENT MONTH */
+
     shiftUrl =
-        baseUrl + "updates/shift/exec/shift_exec_" + monthKey + ".csv?v=" + DATA_VERSION;
+        baseUrl +
+        "exec/shift_exec_" +
+        monthKey +
+        ".csv?v=" +
+        DATA_VERSION;
 
     nonExecUrl =
-        baseUrl + "updates/shift/nonexec/shift_nonexec_" + monthKey + ".csv?v=" + DATA_VERSION;
+        baseUrl +
+        "nonexec/shift_nonexec_" +
+        monthKey +
+        ".csv?v=" +
+        DATA_VERSION;
 
-    /* NEXT MONTH */
     shiftUrlNext =
-        baseUrl + "updates/shift/exec/shift_exec_" + nextMonthKey + ".csv?v=" + DATA_VERSION;
+        baseUrl +
+        "exec/shift_exec_" +
+        nextMonthKey +
+        ".csv?v=" +
+        DATA_VERSION;
 
     nonExecUrlNext =
-        baseUrl + "updates/shift/nonexec/shift_nonexec_" + nextMonthKey + ".csv?v=" + DATA_VERSION;
+        baseUrl +
+        "nonexec/shift_nonexec_" +
+        nextMonthKey +
+        ".csv?v=" +
+        DATA_VERSION;
 
 }
