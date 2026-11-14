@@ -41,14 +41,14 @@ async function renderSelected(){
 
         const selectedExecUrl =
             baseUrl +
-            "updates/exec/shift_exec_" +
+            "updates/shift/exec/shift_exec_" +
             monthKey +
             ".csv?v=" +
             Date.now();
 
         const selectedNonExecUrl =
             baseUrl +
-            "updates/nonexec/shift_nonexec_" +
+            "updates/shift/nonexec/shift_nonexec_" +
             monthKey +
             ".csv?v=" +
             Date.now();
