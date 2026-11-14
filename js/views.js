@@ -638,7 +638,16 @@ function renderNext7Days(){
         }else if(rawShift === "OFF"){
             shiftClass = "OFF";
         }else{
-            shiftClass = displayShift.match(/[A-Z]/)?.[0] || "";
+            const shiftLetters = (displayShift.match(/[ABC]/g) || [])
+                .filter((v, i, a) => a.indexOf(v) === i)
+                .sort()
+                .join("");
+
+            if (shiftLetters.length === 2 || shiftLetters.length === 3) {
+                shiftClass = "SHIFT-" + shiftLetters;
+            } else {
+                shiftClass = displayShift.match(/[A-Z]/)?.[0] || "";
+            }
         }
 
         const isToday = day === todayDate;
