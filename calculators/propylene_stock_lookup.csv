@@ -8,9 +8,9 @@ volume_config,sphere_a,,,,,,795267.5164
 volume_config,sphere_b,,,,,,795421.6323
 volume_config,sphere_c,,,,,,795553.9313
 volume_config,off_spec,,,,,,795091.271
-operating_parameter,sphere_a,,,9.8,,,
-operating_parameter,sphere_b,,,9.8,,,
-operating_parameter,sphere_c,,,9.8,,,
+operating_parameter,sphere_a,,,10.8,,,
+operating_parameter,sphere_b,,,10.8,,,
+operating_parameter,sphere_c,,,10.8,,,
 volume_lookup,sphere_a,0,216,,,,
 volume_lookup,sphere_a,1,249.1587009,,,,
 volume_lookup,sphere_a,2,285.8489644,,,,
